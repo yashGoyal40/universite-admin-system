@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>University Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home">Home</a></li>
+                    <li><a href="#" id="students">Students</a></li>
+                    <li><a href="#" id="teachers">Teachers</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <div id="roleSelection" class="section">
+                <h2>Select Your Role</h2>
+                <button onclick="selectRole('student')">Student</button>
+                <button onclick="selectRole('teacher')">Teacher</button>
+            </div>
+
+            <div id="studentSection" class="section hidden">
+                <h2>Student Operations</h2>
+                <button onclick="createStudent()">Create Student</button>
+                <button onclick="readStudent()">View Student</button>
+                <button onclick="updateStudent()">Update Student</button>
+                <button onclick="deleteStudent()">Delete Student</button>
+                <button onclick="listStudents()">List All Students</button>
+            </div>
+
+            <div id="teacherSection" class="section hidden">
+                <h2>Teacher Operations</h2>
+                <button onclick="createTeacher()">Create Teacher</button>
+                <button onclick="readTeacher()">View Teacher</button>
+                <button onclick="updateTeacher()">Update Teacher</button>
+                <button onclick="deleteTeacher()">Delete Teacher</button>
+                <button onclick="listTeachers()">List All Teachers</button>
+            </div>
+
+            <!-- Updated messageArea with Spinner -->
+            <div id="messageArea" class="response hidden">
+                <div id="spinner" class="spinner hidden"></div>
+                <span id="messageText"></span>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 University Management System</p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
